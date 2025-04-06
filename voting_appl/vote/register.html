@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System - Registration</title>
+    <link rel="stylesheet" href="../css/stylesheet.css">
+    <style>
+        #address {
+            width: 30%;
+        }
+        #Image, #role {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            width: 30%;
+        }
+        #role select {
+            border-radius: 2px;
+            padding: 10px;
+            width: 100%;
+        }
+        button {
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: white;
+            font-family: cursive;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <center>
+
+    <div id="headerSection">
+        <h1>Online Voting System</h1>
+    </div>
+    <hr>
+
+    <div id="bodySection">
+        <h2 style="font-family: cursive;">Registration</h2>
+        <form action="http://localhost/voting_appl/api/register.php" method="POST" enctype="multipart/form-data">
+            <input type="text" name="name" placeholder="Enter your name" required>
+            <input type="number" name="mobile" placeholder="Enter your mobile number" required><br><br>
+            <input type="password" name="password" placeholder="Enter your password" required>
+            <input type="password" name="cpassword" placeholder="Confirm your password" required><br><br>
+            <input id="address" type="text" name="address" placeholder="Enter your address" required><br><br>
+            
+                <div id="Image">
+                    Upload Image: <input type="file" name="photo" required>
+                </div>
+                <br>
+                <div id="role">
+                    Select Role:
+                    <select name="role" required>
+                        <option value="1">Voter</option>
+                        <option value="2">Group</option>
+                    </select>
+                </div>
+            
+            <br>
+            <button type="submit">Register</button><br><br>
+            Already Registered? <a href="../index.html">Login here</a>
+        </form>
+    </div>
+</center>
+</body>
+</html>
